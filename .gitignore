@@ -33,4 +33,5 @@ build/
 .vscode/
 
 ### Database Properties ###
-/resources/application.properties
+# Ignore application.properties under the project's resources
+src/main/resources/application.properties
