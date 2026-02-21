@@ -15,7 +15,7 @@ public class OrderController {
     }
     
     @GetMapping("/{id}")
-    public Object getById(@PathVariable Long id) {
+    public Object getById(@PathVariable String id) {
         // Implementation
         return null;
     }
@@ -33,7 +33,7 @@ public class OrderController {
     }
     
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable String id) {
         // Implementation
     }
 }

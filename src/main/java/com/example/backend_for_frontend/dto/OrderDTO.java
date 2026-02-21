@@ -4,7 +4,7 @@ package com.example.backend_for_frontend.dto;
 
 public class OrderDTO {
     
-    private Long id;
+    private String id;
     
     // Add your properties here
 }

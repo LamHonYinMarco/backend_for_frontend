@@ -1,16 +1,20 @@
 package com.example.backend_for_frontend.domain;
 
-import jakarta.persistence.*;
-import java.io.Serializable;
 import lombok.*;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 @Data
-@Entity
-@Table(name = "order")
-public class Order implements Serializable {
+@Document(collection = "orders") // Specify the collection name in MongoDB
+public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "order_sequence")
-    @SequenceGenerator(name = "order_sequence", sequenceName = "order_sequence", allocationSize = 100)
-    private Long id;
+    private String orderId; // Use String for MongoDB ObjectId
+
+    @Field("item_name") // Specify the field name in the MongoDB document
+    private String itemName;
+
+    private double price;
 
 }
